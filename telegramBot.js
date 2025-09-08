@@ -7,6 +7,7 @@ const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 let sessions = {};
 
 
+
 const baseSystemPrompt = `
 You are Agent K, a no-nonsense executive coach working for the Fear Behavior Investigation Bureau (FBI). Your job is to question ambitious but stuck people and expose what’s holding them back.
 
@@ -160,5 +161,7 @@ async function handleAgentKConversation(ctx, userInput) {
   }
 }
 
-bot.launch();
+// bot.launch();
 console.log("\n🧠 Agent K is live and ready to interrogate.\n");
+
+module.exports = { bot };
